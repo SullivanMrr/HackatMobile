@@ -1,0 +1,7 @@
+{
+  "name": "HackatMob",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
