@@ -11,6 +11,32 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'liste-hackathon',
+    loadChildren: () => import('./liste-hackathon/liste-hackathon.module').then( m => m.ListeHackathonPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+ 
+ 
+  {
+    path: 'details',
+    loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'liste-atelier',
+    loadChildren: () => import('./liste-atelier/liste-atelier.module').then( m => m.ListeAtelierPageModule)
+  },
 ];
 
 @NgModule({

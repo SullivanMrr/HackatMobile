@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form class="form" [formGroup]="userForm" (ngSubmit)="signIn(userForm.value)">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="mail"></ion-input>
+    </ion-item>
+    
+    <ng-container *ngFor="let error of error_msg.mail">
+      <div *ngIf="userForm.get('mail').hasError(error.type) && (userForm.get('mail').dirty || userForm.get('mail').touched)">
+        {{ error.message }}
+      </div>
+    </ng-container>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Mot de Passe</ion-label>
+      <ion-input type="password" formControlName="Password" class="form-controll" required></ion-input>
+    </ion-item>
+    
+    <ng-container *ngFor="let error of error_msg.Password">
+        <div *ngIf="userForm.get('Password').hasError(error.type) && (userForm.get('Password').dirty || userForm.get('Password').touched)">
+          {{ error.message }}
+        </div>
+    </ng-container>
+
+    <ion-button type="submit" expand="block" [disabled]="!userForm.valid">S'identifier</ion-button>
+    
+    <label class="ion-text-center" color="danger">{{errorMsg}}</label>
+  </form>
+  <p class="ion-text-center">Pas encore inscrit ? <a (click)="goToSignup()">S'inscrire</a></p>
+</ion-content>

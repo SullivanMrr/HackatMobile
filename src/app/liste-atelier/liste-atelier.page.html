@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des ateliers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-card>
+      <img
+        src="https://img.freepik.com/vecteurs-libre/concept-hackathon-jeu-icones-grand-mot-texte-au-centre_25156-521.jpg?size=626&ext=jpg" />
+      <h1>Test</h1>
+
+      <ion-item *ngFor="let item of ListeAtelier">
+        <h5 style="text-align:center;">{{item3.libelle}}</h5>
+        <p>à lieu le {{item3.dateeven}} à {{item3.heure}}</p>
+
+
+
+      </ion-item>
+    </ion-card>
+    <ion-button color="tertiary" expand="block" shape="round" (click)="inscription()" >S'inscire à l'évènement</ion-button>
+  </ion-list>
+
+</ion-content>

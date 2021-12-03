@@ -1,0 +1,34 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-title>detailHackathon</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="liste-hackathon"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="https://th.bing.com/th/id/OIP.AXF8IYKqC3Y7JxYRaUrCPQHaEK?pid=ImgDet&rs=1" />
+    <ion-card-header>
+     
+    </ion-card-header>
+    <ion-card-content>
+    <p> Thème :   {{item.theme}} <p>
+        <p> Ville : {{item.ville}} <p>
+          <p> Date de début :{{item.datedebut}} <p>
+            <p> Heure de début :{{item.heuredebut}} <p>
+              <p> Date de fin :{{item.datefin}} <p>
+                <p> heure de fin : {{item.heurefin}} <p>
+                  <p> Lieu : {{item.lieu}} <p>
+                    <p> Rue : {{item.rue}} <p>
+                      <p> Code postal : {{item.codepostal}} <p>
+                        <p> Date limite : {{item.datelimite}} <p>
+                          <p> Nombre de places : {{item.nbplaces}} <p>
+    
+    </ion-card-content>
+  </ion-card>
+  <ion-button color="tertiary" expand="block" shape="round" (click)="listeAtelier()" >Voir les évenements de cet hackathon</ion-button>
+</ion-content>

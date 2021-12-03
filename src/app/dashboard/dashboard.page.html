@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Mon Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+<style>
+
+</style>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Bienvenue : <strong>{{ user }}</strong>
+
+        <p>Email : <strong>{{ userDetail }}</strong></p>
+      </ion-col>
+    </ion-row>
+
+    <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Se déconnecter</ion-button>
+  </ion-grid>
+</ion-content>
